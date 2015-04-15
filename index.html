@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<!--Styles -->
+<link rel="stylesheet" type="text/css" href="css/Payfortoday.css" />
+<link rel="stylesheet" type="text/css" href="css/m-buttons.min.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/jquery-letterfx.min.css" />
+<!--Scripts -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/Payfortoday.js"></script>
+<script src="js/tuxsudo.min.js"></script>
+<script src="js/jquery-letterfx.min.js"></script>
+</head>
+<body onload="HideMainPart()">
+<!--Alerts-->
+    <!--<div id="dialog" title="Weekend">-->
+    <!--<p>Weekend is now! Come here on monday!</p>-->
+	<!--</div>-->	
+<!--Main Area -->
+<div id ="m-count" class="main-container" style="visibility: hidden;">
+<div id="gr-lab" class="gr-lab-c">Great Success! You Do Nothing And Earning Money!</div><br>
+<!--Counters-->
+<div><label id="txt-11">You spent time at work:</label><div id="txt-1"></div></div>
+<div><label id="txt-22">You earned:</label><div id="txt-2"></div></div>
+<div><label id="txt-33">You earning by doing nothing:</label><div id="txt-3"></div></div>
+<div><label id="txt-44">You still have time:</label><div id="txt-4"></div></div>
+<div><label id="txt-55">You will earn:</label><div id="txt-5"></div></div>
+<!--Shares-->
+<div>
+<ul class="share-buttons">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.payfortoday.com&t=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fwww.payfortoday.com&text=:%20http%3A%2F%2Fwww.payfortoday.com" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+  <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fwww.payfortoday.com&title=&summary=&source=http%3A%2F%2Fwww.payfortoday.com" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+</ul>
+</div>
+<!---->
+</div>
+
+<!--Main PopUp -->
+<!--[if lt IE 9]><div class="popup__overlay popup__overlay_ie"></div><![endif]-->
+<div class="popup__overlay" id="m-popup">
+    <div class="popup">
+    <!--Attributes-->
+    <!--#4C8FFC-->
+    <div id="1-blck" style="padding-bottom:30px; font-size:medium;">
+    <span style="background-color:gray; color:white;"> Remember! </span><br> 
+    <span style="background-color:gray; color:white;"> It works only when You are at work! </span><br>    
+    </div>
+    <div id="f-att">
+    <div id="2-blck" style="padding-bottom:15px;">
+    <label class="custom-select">You started work at: 
+    <select id="clc-1" style="margin-left:30px">
+  		<option value="6">06:00</option>
+  		<option value="7">07:00</option>
+  		<option value="8">08:00</option>
+  		<option value="9">09:00</option>
+  		<option value="10">10:00</option>
+  		<option value="11">11:00</option>
+  		<option value="12">12:00</option>
+  		<option value="13">13:00</option>
+  		<option value="14">14:00</option>
+	</select><br>	
+	</div>	
+	<div id="3-blck" style="padding-bottom:15px;">
+	<label class="custom-select">Going to finish at:
+	<select id="clc-2" style="margin-left:46px">
+  		<option value="10">10:00</option>
+  		<option value="11">11:00</option>
+  		<option value="12">12:00</option>
+  		<option value="13">13:00</option>
+  		<option value="14">14:00</option>
+  		<option value="15">15:00</option>
+  		<option value="16">16:00</option>
+  		<option value="17">17:00</option>
+  		<option value="18">18:00</option>
+  		<option value="19">19:00</option>
+  		<option value="20">20:00</option>
+  		<option value="21">21:00</option>
+  		<option value="22">22:00</option>
+  		<option value="23">23:00</option>
+  		<option value="24">24:00</option>
+	</select><br>
+	</label>
+	</div>	
+	<div id="4-blck" style="padding-bottom:15px;">
+	<label>Your month salary:
+	<input type="text" id="custom-input" name="firstname" title="Digits only.." style="color:#888;" 
+    value="Digits only.." onfocus="inputFocus(this)" onblur="inputBlur(this)" /><br>
+    </label>
+	</div>
+	<input type="button" class="m-btn green" value="Start earn money by doing nothing!" id="popup__toggle" onclick="Validate()"/>
+	<ul class="share-buttons">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.payfortoday.com&t=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fwww.payfortoday.com&text=:%20http%3A%2F%2Fwww.payfortoday.com" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+  <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fwww.payfortoday.com&title=&summary=&source=http%3A%2F%2Fwww.payfortoday.com" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+</ul>
+</div>
+
+	</div>
+    </div>
+    <!--[if lt IE 9]><div class="popup__valignfix"></div><![endif]-->
+    
+</div>
+</body>
+</html>
