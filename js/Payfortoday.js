@@ -95,8 +95,10 @@ function Validate(){
 
     loadstatscounters(workdays, wh, sabsval);
     }  
-    }
     */
+    }
+    
+
 function loadstatscounters(workdays, wrk, sabsval){
 	document.getElementById("m-count").style.visibility = "visible";
 	document.body.style.backgroundColor = "#c5c5c5";
