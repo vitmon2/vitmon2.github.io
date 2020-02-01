@@ -20,6 +20,7 @@ function inputFocus(i){
 function inputBlur(i){
     if(i.value==""){ i.value=i.defaultValue; i.style.color="#888"; }
 }
+
 function Validate(){
 	var flag = 1;
 	var d = new Date();
@@ -27,8 +28,9 @@ function Validate(){
 	var start = document.getElementById('clc-1').value;
 	var finish = document.getElementById('clc-2').value;
 	var wh = finish - start ;
-	var weekday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday",
+	var weekday = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday",
                 "Friday","Saturday");
+
    	var workdays = getWeekdaysInMonth(d.getMonth(), d.getYear()); 
    	
 	if (n >= start && n < finish) {
@@ -41,8 +43,9 @@ function Validate(){
 	{
 		flag = 0; 
 		alert("Works only when you are at work!");
-	}	
-	if (weekday[d.getDay()] != "Sunday" && weekday[d.getDay()] != "Saturday"){
+    }
+    	
+	//if (weekday[d.getDay()] != "Sunday" && weekday[d.getDay()] != "Saturday"){
 		var vs=document.getElementById("custom-input").value;
     		if (vs == "Digits only..")
     		{
@@ -73,7 +76,8 @@ function Validate(){
    				alert("Salary format should be: 2000, 3400, 5567...");
    				}
    			}	
-	} 
+    //} 
+    
 	else
 	{
 		flag = 0;
