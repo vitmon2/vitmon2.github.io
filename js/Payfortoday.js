@@ -164,6 +164,7 @@ function EarnedByNothing(workdays, wrk, sabsval) {
     document.getElementById('txt-3').innerHTML = ern.toFixed(5);    
     var t = setTimeout(function(){EarnedByNothing(workdays, wrk, sabsval) },500);
 }
+
 function LeftTimeAtWork() {
   var today=new Date();
     var h=today.getHours();
@@ -178,6 +179,7 @@ function LeftTimeAtWork() {
     document.getElementById('txt-4').innerHTML = h+":"+m+":"+s;
     var t = setTimeout(function(){LeftTimeAtWork() },500);
 }
+
 function TodayWillEarn(workdays, wrk) {
     var today=new Date();
     var h=today.getHours();
