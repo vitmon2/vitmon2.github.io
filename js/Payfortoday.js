@@ -204,6 +204,7 @@ function TodayWillEarn(workdays, wrk) {
     document.getElementById('txt-5').innerHTML = ern.toFixed(2);
     var t = setTimeout(function(){TodayWillEarn(workdays, wrk)  },500);
 }
+
 //Helpers
 function getWeekdaysInMonth(month, year) {
 var days = daysInMonth(month, year);
