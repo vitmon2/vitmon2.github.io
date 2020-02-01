@@ -78,8 +78,8 @@ function Validate(){
    			}	
     //} 
     
-	else
-	{
+	//else
+	//{
 		flag = 0;
 		alert("Weekend is now. Come here on Monday!");
 	}	
@@ -94,7 +94,7 @@ function Validate(){
 
     loadstatscounters(workdays, wh, sabsval);
     }  
-    }
+    //}
 
 function loadstatscounters(workdays, wrk, sabsval){
 	document.getElementById("m-count").style.visibility = "visible";
